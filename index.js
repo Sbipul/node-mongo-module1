@@ -1,5 +1,4 @@
-// Promise call
-
+// ====================================================================================Promise call
 // const myPromise = new Promise((resolve, reject) => {
 //   const user = {id:1};
 //   if (!user) {
@@ -21,32 +20,51 @@
 //   .then((res) => console.log("found in then", res))
 //   .catch((err) => console.log("found in catch", err));
 
-// Async await
+// =======================================================================================Async await
+// const myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("success");
+//   }, 1000);
+// });
 
-const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("success");
-  }, 1000);
-});
+// const getData = async () => {
+//   const res = await myPromise;
+//   console.log(res);
+// };
+// getData();
 
-const getData = async () => {
-  const res = await myPromise;
-  console.log(res);
-};
-getData();
+// fetch(url)
+//   .then((res) => res.json)
+//   .then((data) => console.log(data));
 
-fetch(url)
-  .then((res) => res.json)
-  .then((data) => console.log(data));
+// const getUsers = async () => {
+//   const res = await fetch("url");
+//   const data = res.json();
+//   console.log(data);
 
-const getUsers = async () => {
-  const res = await fetch("url");
-  const data = res.json();
-  console.log(data);
+//   const res2 = await fetch("url");
+//   const data2 = res.json();
+//   console.log(data);
+// };
+// getUsers();
 
-  const res2 = await fetch("url");
-  const data2 = res.json();
-  console.log(data);
-};
+// =====================================================================================Handling errors
+// const errorHandler = (error) => {
+//     const {name,message,stack} = error
+//     console.log(name,message)
 
-getUsers();
+// }
+// const getData = async () => {
+//   try {
+//     // undefined.find();
+//     const emailError = new Error("Email already exists");
+//     throw emailError
+//   } catch (error) {
+//     errorHandler(error);
+//   }
+// };
+// getData();
+
+// console.log("test error handleing");
+
+// ============================================================================ Module creating/export import
