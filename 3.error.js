@@ -18,7 +18,10 @@
 // console.log("test error handleing");
 
 // ============================================================================ Module creating/export import
-const errorHandler = require("./errorHandler.js");
+// const {errorHandler,test} = require("./errorHandler.js");
+import test from './errorHandler.js'
+import {errorHandler} from './errorHandler.js'
+test()
 const getData = async () => {
   try {
     // undefined.find();
